@@ -1,11 +1,23 @@
 import React from "react";
+import { Gloria_Hallelujah } from "@next/font/google";
+import Link from "next/link";
+
+const gloria = Gloria_Hallelujah({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const Footer = () => {
   return (
     <footer className="bg-pink-100 py-8">
       <div className="container mx-auto text-center">
         {/* Logo */}
-        <div className="text-2xl font-bold text-pink-600 mb-4">SemDoll</div>
+        <div className="text-4xl font-bold text-primary-main">
+          <Link className={gloria.className} href="/">
+            SemDoll
+            {/* <img className="w-32" src="/assets/logo.jpg" alt="" /> */}
+          </Link>
+        </div>
 
         {/* Links */}
         <div className="flex justify-center space-x-6 text-gray-700 font-medium mb-4">
