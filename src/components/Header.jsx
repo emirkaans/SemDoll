@@ -9,28 +9,24 @@ const gloria = Gloria_Hallelujah({
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-md">
+    <header className="bg-white shadow-md h-[8dvh]">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo */}
         <div className="text-4xl font-bold text-primary-main">
           <Link className={gloria.className} href="/">
             SemDoll
-            {/* <img className="w-32" src="/assets/logo.jpg" alt="" /> */}
           </Link>
         </div>
 
         {/* Navigation */}
         <nav className="flex space-x-6 text-gray-700 font-medium">
           <Link href="/about-us" className="hover:text-pink-600">
-            {" "}
             About Us
           </Link>
           <Link href="/shop" className="hover:text-pink-600">
-            {" "}
             Shop
           </Link>
           <Link href="/contact" className="hover:text-pink-600">
-            {" "}
             Contact
           </Link>
         </nav>
