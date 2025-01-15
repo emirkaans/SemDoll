@@ -1,4 +1,4 @@
-import ListItemCard from "./ListItemCard";
+import ListItemCard from "./HomeListItemCard";
 
 const data = {
   waldorfDolls: [
