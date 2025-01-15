@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export const Hero = () => {
@@ -20,7 +21,7 @@ export const Hero = () => {
           imagination.
         </p>
         <button className="py-2 px-4 text-xl mt-4 self-center bg-rose-300 text-stone-800 font-semibold rounded-2xl hover:bg-rose-400 transition-all duration-500">
-          Go to Shop
+          <Link href="/shop">Go to Shop</Link>
         </button>
       </div>
     </section>
