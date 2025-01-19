@@ -1,5 +1,4 @@
 import { ShopListing } from "@/components/ShopListing";
-import data from "@/data/data.json";
 
 export const metadata = {
   title: "Shop - Waldorf Dolls",
