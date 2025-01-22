@@ -1,14 +1,12 @@
+import Link from "next/link";
 import React from "react";
 
 export const ShopListItemCard = ({ doll }) => {
   return (
-    <div
-      key={doll.id}
-      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col h-full"
-    >
+    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col h-full">
       <div className="w-full h-64 flex items-center justify-center bg-gray-100">
         <img
-          src={doll.img}
+          src={doll.img[0]}
           alt={doll.name}
           className="max-h-full max-w-full object-contain"
         />
@@ -38,14 +36,12 @@ export const ShopListItemCard = ({ doll }) => {
             )}
           </p>
         </div>
-        <a
-          href={doll.url}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href={`/shop/${doll.id}`}
           className="block text-center bg-gray-800 text-white py-2 rounded-md hover:bg-gray-700 transition duration-300 mt-auto"
         >
           View Details
-        </a>
+        </Link>
       </div>
     </div>
   );
