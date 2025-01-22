@@ -1,5 +1,5 @@
 import React from "react";
-import data from "@/data/data.json";
+import data from "@/data/grandData.json";
 import { ShopListItemCard } from "./ShopListItemCard";
 
 export const ShopListing = () => {
@@ -10,8 +10,8 @@ export const ShopListing = () => {
           Shop Waldorf Dolls
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {data.map((doll, index) => (
-            <ShopListItemCard key={index} doll={doll} />
+          {data.map((doll) => (
+            <ShopListItemCard key={doll.id} doll={doll} />
           ))}
         </div>
       </div>
