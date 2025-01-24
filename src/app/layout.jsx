@@ -1,6 +1,12 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { Nunito } from "@next/font/google";
+
+const fontNunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -10,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-dvh">
+      <body className={`flex flex-col min-h-dvh ${fontNunito.variable}`}>
         <Header />
         <main className="flex-grow"> {children}</main>
         <Footer />
