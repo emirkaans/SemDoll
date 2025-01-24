@@ -19,7 +19,7 @@ const Header = () => {
         </div>
 
         {/* Navigation */}
-        <nav className="flex space-x-6 font-medium text-gray-700">
+        <nav className="hidden space-x-6 font-medium text-gray-700 lg:flex">
           <Link href="/about-us" className="hover:text-pink-600">
             About Us
           </Link>
