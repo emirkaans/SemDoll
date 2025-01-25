@@ -20,9 +20,12 @@ const Header = () => {
 
         {/* Navigation */}
         <nav className="hidden space-x-6 font-medium text-gray-700 lg:flex">
-          <Link href="/about-us" className="hover:text-pink-600">
-            About Us
+          <Link href="/" className="hover:text-pink-600">
+            Home
           </Link>
+          {/* <Link href="/about-us" className="hover:text-pink-600">
+            About Artist
+          </Link> */}
           <Link href="/shop" className="hover:text-pink-600">
             Shop
           </Link>
