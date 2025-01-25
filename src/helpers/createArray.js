@@ -12,6 +12,19 @@ const generateIdFromName = (name) => {
   return Math.abs(hash);
 };
 
+const toCamelCase = (input) => {
+  return input
+    .toLowerCase()
+    .split(/[\s_-]+/)
+    .map((word, index) => {
+      if (index === 0) {
+        return word;
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join("");
+};
+
 const parsePrice = (stringPrice) => {
   let price = 0;
 
@@ -33,7 +46,7 @@ const parsePrice = (stringPrice) => {
 const findLastMatchingNode = (htmlContainer, selector, text) => {
   const elements = Array.from(htmlContainer.querySelectorAll(selector));
   const matchingElements = elements.filter((el) =>
-    el.textContent.includes(text)
+    el.textContent.includes(text),
   );
 
   return matchingElements.length > 0
@@ -61,13 +74,13 @@ const createProductObject = (htmlContainer, url) => {
     originalPrice:
       parsePrice(
         htmlContainer.querySelector(
-          "[data-buy-box-region=price] [class*=strikethrough]"
-        )?.textContent
+          "[data-buy-box-region=price] [class*=strikethrough]",
+        )?.textContent,
       ) || price,
     currency: priceText.split(" ").slice(-1)[0],
     description: (
       htmlContainer.querySelector(
-        "p[data-product-details-description-text-content]"
+        "p[data-product-details-description-text-content]",
       )?.textContent || ""
     ).trim(),
     materials: (
@@ -82,7 +95,7 @@ const createProductObject = (htmlContainer, url) => {
       findLastMatchingNode(
         htmlContainer,
         "li.wt-block-grid__item div",
-        "Height"
+        "Height",
       )?.textContent || ""
     )
       .trim()
@@ -90,7 +103,7 @@ const createProductObject = (htmlContainer, url) => {
       .slice(-1)[0]
       .trim(),
     img: Array.from(
-      htmlContainer.querySelectorAll("li[data-carousel-pagination-item] img")
+      htmlContainer.querySelectorAll("li[data-carousel-pagination-item] img"),
     ).map((node) => {
       return (node?.dataset?.srcDelay || "").replace("il_75x75", "il_794x");
     }),
@@ -174,8 +187,8 @@ const product = {
   originalPrice:
     parsePrice(
       document.querySelector(
-        "[data-buy-box-region=price] [class*=strikethrough]"
-      )?.textContent
+        "[data-buy-box-region=price] [class*=strikethrough]",
+      )?.textContent,
     ) || price,
   currency: priceText.split(" ").slice(-1)[0],
   description: (
@@ -199,7 +212,7 @@ const product = {
     .slice(-1)[0]
     .trim(),
   img: Array.from(
-    document.querySelectorAll("li[data-carousel-pagination-item] img")
+    document.querySelectorAll("li[data-carousel-pagination-item] img"),
   ).map((node) => {
     return (node.src || "").replace("il_75x75", "il_794x");
   }),
