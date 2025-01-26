@@ -1,0 +1,128 @@
+"use client";
+
+import React, { useState } from "react";
+import data from "@/data/grandData.json";
+import { useRouter } from "next/navigation";
+import { Button } from "./Button";
+import { descriptions } from "@/constants/constants";
+
+export const ProductDetailCard = ({ id }) => {
+  const router = useRouter();
+  const product = data.find((item) => item.id === id);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  if (!product) {
+    router.push("/not-found");
+    return null;
+  }
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % product.img.length);
+  };
+
+  const handlePreviousImage = () => {
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex - 1 + product.img.length) % product.img.length,
+    );
+  };
+
+  return (
+    <div className="flex min-h-screen items-center justify-center md:px-6 md:py-10">
+      <div className="w-full max-w-7xl bg-white p-2 shadow-xl md:grid md:grid-cols-5 md:px-10 md:py-5 lg:gap-10 lg:px-20 lg:py-10">
+        {/* Left Section: Slider */}
+        <div className="flex flex-col items-center justify-center md:col-span-3">
+          <div className="relative w-full overflow-hidden rounded-lg lg:h-[500px]">
+            {/* Slider Wrapper */}
+            <div
+              className="flex h-full w-full transition-transform duration-500"
+              style={{
+                transform: `translateX(-${currentImageIndex * 100}%)`,
+              }}
+            >
+              {product.img.map((image, index) => (
+                <div
+                  key={index}
+                  className="h-full w-full flex-shrink-0 self-center"
+                >
+                  <img
+                    src={image}
+                    alt={`${product.name} - ${index + 1}`}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Navigation Buttons */}
+            <button
+              className="absolute left-4 top-1/2 -translate-y-1/2 transform rounded-full p-3 text-lg"
+              onClick={handlePreviousImage}
+            >
+              ❮
+            </button>
+            <button
+              className="absolute right-4 top-1/2 -translate-y-1/2 transform rounded-full p-3 text-lg"
+              onClick={handleNextImage}
+            >
+              ❯
+            </button>
+          </div>
+
+          {/* Thumbnails */}
+          <div className="mt-4 hidden justify-center gap-x-2 lg:flex">
+            {product.img.map((image, index) => (
+              <button
+                key={index}
+                className={`h-12 w-12 flex-shrink-0 overflow-hidden rounded-md border-2 ${
+                  index === currentImageIndex
+                    ? "border-rose-400"
+                    : "border-gray-300"
+                }`}
+                onClick={() => setCurrentImageIndex(index)}
+              >
+                <img
+                  src={image}
+                  alt={`Thumbnail ${index + 1}`}
+                  className="h-full w-full object-cover"
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Section: Product Details */}
+        <div className="flex flex-col justify-between rounded-lg p-1 md:col-span-2 md:p-3 lg:p-6">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-800">{product.name}</h1>
+            <div className="mt-4 flex items-center gap-4">
+              <p className="text-2xl font-bold text-gray-600">
+                ${product.price.toFixed(2)}
+              </p>
+              {product.price !== product.originalPrice && (
+                <p className="text-xl text-gray-400 line-through">
+                  ${product.originalPrice.toFixed(2)}
+                </p>
+              )}
+            </div>
+          </div>
+
+          {product.materials && (
+            <p className="mt-6 text-sm text-gray-500">
+              Materials: {product.materials}
+            </p>
+          )}
+          {product.height && (
+            <p className="mt-2 text-sm text-gray-500">
+              Height: {product.height}
+            </p>
+          )}
+          <p className="my-6 text-lg text-gray-700">
+            {descriptions[product.type]}
+          </p>
+
+          <Button href={product.url} text="View on Etsy" isBlank={true} />
+        </div>
+      </div>
+    </div>
+  );
+};
