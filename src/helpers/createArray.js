@@ -221,8 +221,11 @@ const getProductFromProductDetail = () => {
       .slice(-1)[0]
       .trim(),
     height: (
-      findLastMatchingNode("li.wt-block-grid__item div", "Height")
-        ?.textContent || ""
+      findLastMatchingNode(
+        window.document,
+        "li.wt-block-grid__item div",
+        "Height",
+      )?.textContent || ""
     )
       .trim()
       .split(":")
