@@ -1,7 +1,7 @@
 import data from "@/data/grandData.json";
 import { ShopListItemCard } from "./ShopListItemCard";
 import { Gloria_Hallelujah } from "@next/font/google";
-import { getRandomElements } from "@/helpers/createArray";
+import { getRandomElements } from "@/helpers/helpers";
 
 const gloria = Gloria_Hallelujah({
   subsets: ["latin"],
