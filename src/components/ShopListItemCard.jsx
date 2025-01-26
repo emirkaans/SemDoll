@@ -5,7 +5,7 @@ import { Button } from "./Button";
 
 export const ShopListItemCard = ({ doll }) => {
   return (
-    <div className="flex h-full max-w-80 flex-col overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 hover:shadow-lg">
+    <div className="flex h-full min-w-64 max-w-80 flex-col overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 hover:shadow-lg">
       <div className="relative flex h-64 w-full items-center justify-center">
         <img
           src={doll.img[0]}
