@@ -5,11 +5,18 @@ import data from "@/data/grandData.json";
 import { useRouter } from "next/navigation";
 import { Button } from "./Button";
 import { descriptions } from "@/constants/constants";
+import { isAlreadyInWishlist, toggleWishlist } from "@/app/utils/utils";
 
 export const ProductDetailCard = ({ id }) => {
   const router = useRouter();
   const product = data.find((item) => item.id === id);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isLiked, setIsLiked] = useState(isAlreadyInWishlist(product.id));
+
+  const toggleButton = () => {
+    setIsLiked(!isLiked);
+    toggleWishlist(product.id);
+  };
 
   if (!product) {
     router.push("/not-found");
@@ -103,6 +110,26 @@ export const ProductDetailCard = ({ id }) => {
                   ${product.originalPrice.toFixed(2)}
                 </p>
               )}
+              <button
+                aria-label="Add to Wishlist"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md transition hover:bg-gray-200"
+                onClick={toggleButton}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill={isLiked ? "#b62000" : "none"}
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="#b62000"
+                  className={`h-8 w-8 ${isLiked ? "text-red-500" : "text-gray-500"}`}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M16.5 3.75a5.625 5.625 0 00-4.5 2.343A5.625 5.625 0 007.5 3.75C4.85 3.75 3 5.75 3 8.25c0 5.25 9 10.5 9 10.5s9-5.25 9-10.5c0-2.5-1.85-4.5-4.5-4.5z"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
 
