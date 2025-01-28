@@ -8,6 +8,10 @@ export const navigationMenu = [
     title: "Shop",
   },
   {
+    href: "/wishlist",
+    title: "Wishlist",
+  },
+  {
     href: "/contact",
     title: "Contact",
   },
