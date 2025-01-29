@@ -1,13 +1,15 @@
+export const getWishlistProducts = () => {
+  return JSON.parse(localStorage.getItem("wishlist-products") || "[]") || [];
+};
+
 export const isAlreadyInWishlist = (id) => {
-  const wishlistProducts =
-    JSON.parse(localStorage.getItem("wishlist-products") || "[]") || [];
+  const wishlistProducts = getWishlistProducts();
 
   return wishlistProducts.filter((productId) => productId === id).length > 0;
 };
 
 export const toggleWishlist = (id) => {
-  let wishlistProducts =
-    JSON.parse(localStorage.getItem("wishlist-products") || "[]") || [];
+  let wishlistProducts = getWishlistProducts();
 
   if (isAlreadyInWishlist(id)) {
     wishlistProducts = wishlistProducts.filter((productId) => productId !== id);
