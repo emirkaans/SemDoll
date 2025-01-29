@@ -5,6 +5,7 @@ RewriteEngine On
 RewriteRule ^shop/?$ /shop.html [L]
 RewriteRule ^about-us/?$ /about-us.html [L]
 RewriteRule ^contact/?$ /contact.html [L]
+RewriteRule ^wishlist/?$ /wishlist.html [L]
 
 # Handle product pages in /shop (e.g., /shop/39184680 -> /shop/39184680.html)
 RewriteRule ^shop/([0-9]+)$ /shop/$1.html [L]
