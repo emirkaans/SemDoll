@@ -4,6 +4,7 @@ import data from "@/data/grandData.json";
 import { ShopListItemCard } from "./ShopListItemCard";
 import { Gloria_Hallelujah } from "@next/font/google";
 import { Button } from "./Button";
+import { getWishlistProducts } from "@/app/utils/utils";
 
 const gloria = Gloria_Hallelujah({
   subsets: ["latin"],
@@ -11,8 +12,22 @@ const gloria = Gloria_Hallelujah({
 });
 
 export const WishlistListing = () => {
-  const wishlistProducts =
-    JSON.parse(window.localStorage.getItem("wishlist-products") || "[]") || [];
+  const [wishlistProducts, setWishlistProducts] = useState([]);
+
+  useEffect(() => {
+    setWishlistProducts(getWishlistProducts());
+
+    const handleStorageChange = () => {
+      setWishlistProducts(getWishlistProducts());
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
+  }, []);
+
   const selectedIdsSet = new Set(wishlistProducts);
   const filteredProducts = data.filter((product) =>
     selectedIdsSet.has(product.id),
@@ -25,29 +40,27 @@ export const WishlistListing = () => {
           <h1
             className={`${gloria.className} mb-12 text-2xl text-rose-800 md:text-3xl lg:text-4xl`}
           >
-            Wishlist is waiting for your favorites
+            Looks like your wishlist is empty.
           </h1>
-
-          <Button href="/shop" text="Shop Now" />
+          <Button href="/shop" text="Find something you love!" />
         </>
       ) : (
         <>
           <h1 className={`${gloria.className} my-8 text-4xl text-rose-800`}>
-            My Wishlist
+            My Wishlist ({filteredProducts.length})
           </h1>
           <div className="container px-4">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {filteredProducts.map((doll) => {
-                console.log(filteredProducts);
-
-                return (
-                  <ShopListItemCard
-                    key={doll.id}
-                    doll={doll}
-                    onWishlist={true}
-                  />
-                );
-              })}
+              {filteredProducts.map((doll) => (
+                <ShopListItemCard
+                  key={doll.id}
+                  doll={doll}
+                  onWishlist={true}
+                  updateWishlist={() =>
+                    setWishlistProducts(getWishlistProducts())
+                  }
+                />
+              ))}
             </div>
           </div>
         </>
