@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import data from "@/data/grandData.json";
 import { ShopListItemCard } from "./ShopListItemCard";
 import { Gloria_Hallelujah } from "@next/font/google";
 import { Button } from "./Button";
@@ -11,7 +10,7 @@ const gloria = Gloria_Hallelujah({
   weight: ["400"],
 });
 
-export const WishlistListing = () => {
+export const WishlistListing = ({products}) => {
   const [wishlistProducts, setWishlistProducts] = useState([]);
 
   useEffect(() => {
@@ -29,7 +28,7 @@ export const WishlistListing = () => {
   }, []);
 
   const selectedIdsSet = new Set(wishlistProducts);
-  const filteredProducts = data.filter((product) =>
+  const filteredProducts = products.filter((product) =>
     selectedIdsSet.has(product.id),
   );
 

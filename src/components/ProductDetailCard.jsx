@@ -1,15 +1,13 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import data from "@/data/grandData.json";
 import { useRouter } from "next/navigation";
 import { Button } from "./Button";
 import { descriptions } from "@/constants/constants";
 import { isAlreadyInWishlist, toggleWishlist } from "@/app/utils/utils";
 
-export const ProductDetailCard = ({ id }) => {
+export const ProductDetailCard = ({ product }) => {
   const router = useRouter();
-  const product = data.find((item) => item.id === id);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLiked, setIsLiked] = useState(false);
 
