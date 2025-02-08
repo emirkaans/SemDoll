@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   IconMail,
@@ -6,6 +8,7 @@ import {
   IconBrandFacebook,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const accounts = [
   {
@@ -37,7 +40,11 @@ const accounts = [
 
 const Contact = () => {
   return (
-    <div className="flex h-full w-full items-center justify-center">
+    <motion.div
+      className="flex h-full w-full items-center justify-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       <div className="container p-6">
         <h1 className="mb-6 text-center text-3xl font-bold text-gray-800">
           Contact Me
@@ -72,7 +79,7 @@ const Contact = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
