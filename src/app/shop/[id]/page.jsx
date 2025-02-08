@@ -17,7 +17,11 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }) {
   const { id } = await params;
-  if (!id) redirect("/");
+
+  if (data.filter((product) => product.id.toString() === id).length === 0) {
+    redirect("/not-found");
+  }
+
   return (
     <>
       <ProductDetailCard id={id} />
