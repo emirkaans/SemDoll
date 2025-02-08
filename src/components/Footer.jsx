@@ -12,15 +12,12 @@ const Footer = () => {
   return (
     <footer className="bg-pink-100 pt-4">
       <div className="flex flex-col items-center justify-center gap-6 text-center">
-        {/* Logo */}
         <div className="text-4xl font-bold text-primary-main">
           <Link className={gloria.className} href="/">
             SemDoll
-            {/* <img className="w-32" src="/assets/logo.jpg" alt="" /> */}
           </Link>
         </div>
 
-        {/* Links */}
         <div className="mb-4 flex justify-center gap-x-6 font-medium text-gray-700">
           {navigationMenu.map((item, key) => (
             <Link
