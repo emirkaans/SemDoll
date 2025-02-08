@@ -20,7 +20,6 @@ const Header = () => {
   return (
     <header className="bg-light_pink/5 shadow-md">
       <div className="flex items-center justify-between px-6 py-4 lg:px-12">
-        {/* Logo */}
         <div className="text-4xl font-bold text-primary-main">
           <Link className={gloria.className} href="/">
             SemDoll
@@ -52,7 +51,6 @@ const Header = () => {
           </div>
         )}
 
-        {/* Navigation */}
         <nav className="hidden space-x-6 font-medium text-gray-700 lg:flex">
           {navigationMenu.map((item, key) => (
             <Link
