@@ -208,10 +208,6 @@ const getProductFromProductDetail = () => {
         )?.textContent,
       ) || price,
     currency: priceText.split(" ").slice(-1)[0],
-    description: (
-      document.querySelector("p[data-product-details-description-text-content]")
-        ?.textContent || ""
-    ).trim(),
     materials: (
       document.querySelector("p#legacy-materials-product-details")
         ?.textContent || ""
