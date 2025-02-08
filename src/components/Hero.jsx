@@ -1,9 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <section className="relative h-[92dvh] w-full bg-black/80">
+    <motion.section
+      className="relative h-[92dvh] w-full bg-black/80"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       <div className="absolute inset-0 z-10 bg-black/50 lg:to-transparent"></div>
 
       <img
@@ -24,6 +31,6 @@ export const Hero = () => {
           <Link href="/shop">Go to Shop</Link>
         </button>
       </div>
-    </section>
+    </motion.section>
   );
 };

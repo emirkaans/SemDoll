@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "./Button";
 import { descriptions } from "@/constants/constants";
 import { isAlreadyInWishlist, toggleWishlist } from "@/app/utils/utils";
+import { motion } from "framer-motion";
 
 export const ProductDetailCard = ({ id }) => {
   const router = useRouter();
@@ -40,7 +41,11 @@ export const ProductDetailCard = ({ id }) => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center md:px-6 md:py-10">
+    <motion.div
+      className="flex min-h-screen items-center justify-center md:px-6 md:py-10"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       <div className="w-full max-w-7xl bg-white p-2 shadow-xl md:grid md:grid-cols-5 md:px-10 md:py-5 lg:gap-10 lg:px-20 lg:py-10">
         {/* Left Section: Slider */}
         <div className="flex flex-col items-center justify-center md:col-span-3">
@@ -156,6 +161,6 @@ export const ProductDetailCard = ({ id }) => {
           <Button href={product.url} text="View on Etsy" isBlank={true} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
