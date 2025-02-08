@@ -33,3 +33,19 @@ export const descriptions = {
   feltedDollHead:
     "These Waldorf doll heads are carefully shaped using the needle felting technique, resulting in a firm and durable structure. Each head is crafted with meticulous detail and can be customized to fit the size of the doll you’re creating. Perfect for your handmade projects, these heads are the same ones I use for the dolls in my store. A great starting point for creating your own unique doll!",
 };
+
+export const framerContainerVariants = {
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+export const framerItemVariants = {
+  hidden: { opacity: 0, translateY: 20 },
+  visible: {
+    opacity: 1,
+    translateY: 0,
+  },
+};
