@@ -6,7 +6,7 @@ const generateIdFromName = (name) => {
     hash |= 0;
   }
 
-  return Math.abs(hash);
+  return Math.abs(hash).toString();
 };
 
 const toCamelCase = (input) => {
@@ -190,6 +190,18 @@ const getProductFromProductDetail = () => {
     document
       .querySelector("h1[data-buy-box-listing-title]")
       ?.textContent.trim() || "";
+  const height = (
+    findLastMatchingNode(
+      window.document,
+      "li.wt-block-grid__item div",
+      "Height",
+    )?.textContent || ""
+  )
+    .trim()
+    .split(":")
+    .slice(-1)[0]
+    .trim();
+  const type = "Waldorf Doll";
   const priceText = (
     document.querySelector("[data-buy-box-region=price] p")?.textContent || ""
   )
@@ -197,9 +209,10 @@ const getProductFromProductDetail = () => {
     .slice(-1)[0]
     .trim();
   const price = parsePrice(priceText);
+  const url = window.location.href.split("?")[0];
   const product = {
-    id: generateIdFromName(name),
-    name,
+    id: generateIdFromName(name + url),
+    name: `${height} ${type}`,
     price,
     originalPrice:
       parsePrice(
@@ -207,7 +220,7 @@ const getProductFromProductDetail = () => {
           "[data-buy-box-region=price] [class*=strikethrough]",
         )?.textContent,
       ) || price,
-    currency: priceText.split(" ").slice(-1)[0],
+    currency: "USD",
     materials: (
       document.querySelector("p#legacy-materials-product-details")
         ?.textContent || ""
@@ -216,23 +229,14 @@ const getProductFromProductDetail = () => {
       .split(":")
       .slice(-1)[0]
       .trim(),
-    height: (
-      findLastMatchingNode(
-        window.document,
-        "li.wt-block-grid__item div",
-        "Height",
-      )?.textContent || ""
-    )
-      .trim()
-      .split(":")
-      .slice(-1)[0]
-      .trim(),
+    height,
     img: Array.from(
       document.querySelectorAll("li[data-carousel-pagination-item] img"),
     ).map((node) => {
       return (node.src || "").replace("il_75x75", "il_794x");
     }),
-    url: window.location.href.split("?")[0],
+    url,
+    type: toCamelCase(type),
   };
 
   return product;
