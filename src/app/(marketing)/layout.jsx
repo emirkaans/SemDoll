@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import "./globals.css";
+import "@/app/globals.css";
 import Footer from "@/components/Footer";
 import { Nunito } from "@next/font/google";
 

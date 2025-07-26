@@ -4,7 +4,7 @@ import data from "@/data/grandData.json";
 import { ShopListItemCard } from "./ShopListItemCard";
 import { Gloria_Hallelujah } from "@next/font/google";
 import { Button } from "./Button";
-import { getWishlistProducts } from "@/app/utils/utils";
+import { getWishlistProducts } from "@/app/(marketing)/utils/utils";
 import { motion } from "framer-motion";
 import {
   framerContainerVariants,

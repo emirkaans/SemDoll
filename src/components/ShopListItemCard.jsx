@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Button } from "./Button";
-import { isAlreadyInWishlist, toggleWishlist } from "@/app/utils/utils";
+import { isAlreadyInWishlist, toggleWishlist } from "@/app/(marketing)/utils/utils";
 
 export const ShopListItemCard = ({ doll, onWishlist, updateWishlist }) => {
   const [isLiked, setIsLiked] = useState(false);

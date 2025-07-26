@@ -5,7 +5,10 @@ import data from "@/data/grandData.json";
 import { useRouter } from "next/navigation";
 import { Button } from "./Button";
 import { descriptions } from "@/constants/constants";
-import { isAlreadyInWishlist, toggleWishlist } from "@/app/utils/utils";
+import {
+  isAlreadyInWishlist,
+  toggleWishlist,
+} from "@/app/(marketing)/utils/utils";
 import { motion } from "framer-motion";
 
 export const ProductDetailCard = ({ id }) => {
