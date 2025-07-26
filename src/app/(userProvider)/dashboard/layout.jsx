@@ -21,7 +21,7 @@ export default function DashboardLayout({ children }) {
             className={`rounded-md px-2 py-1 text-sm font-medium ${pathname.startsWith("/dashboard/blog") ? "bg-white text-[#09090B]" : ""}`}
           >
             <Link href="/dashboard/blog" className="flex items-center gap-2">
-              <IconFileText size={16} /> <span>Blog</span>
+              <IconFileText size={16} /> <span>Ürünler</span>
             </Link>
           </li>
         </ul>
