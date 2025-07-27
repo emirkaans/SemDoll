@@ -18,9 +18,9 @@ export default function DashboardLayout({ children }) {
             </Link>
           </li>
           <li
-            className={`rounded-md px-2 py-1 text-sm font-medium ${pathname.startsWith("/dashboard/blog") ? "bg-white text-[#09090B]" : ""}`}
+            className={`rounded-md px-2 py-1 text-sm font-medium ${pathname.startsWith("/dashboard/urun") ? "bg-white text-[#09090B]" : ""}`}
           >
-            <Link href="/dashboard/blog" className="flex items-center gap-2">
+            <Link href="/dashboard/urun" className="flex items-center gap-2">
               <IconFileText size={16} /> <span>Ürünler</span>
             </Link>
           </li>

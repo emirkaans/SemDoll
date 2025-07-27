@@ -6,43 +6,41 @@ import { supabase } from "@/lib/supabase";
 import { IconPlus, IconTrash } from "@tabler/icons-react";
 import dynamic from "next/dynamic";
 
-const CustomEditor = dynamic(() => import("@/components/Editor"), {
-  ssr: false,
-});
+// const CustomEditor = dynamic(() => import("@/components/Editor"), {
+//   ssr: false,
+// });
 
-export default function BlogDuzenle() {
+export default function EditProduct() {
   const router = useRouter();
   const { id } = useParams();
   const [title, setTitle] = useState("");
   const [slug, setSlug] = useState("");
-  const [language, setLanguage] = useState("tr");
   const [coverUrl, setCoverUrl] = useState("");
   const [content, setContent] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const fetchBlog = async () => {
+    const fetchProduct = async () => {
       setLoading(true);
       const { data, error } = await supabase
-        .from("blog")
+        .from("doll")
         .select("*")
         .eq("id", id)
         .single();
 
       if (error) {
-        alert("Blog yüklenirken hata: " + error.message);
+        alert("Ürün yüklenirken hata: " + error.message);
         router.push("/");
       } else {
         setTitle(data.title);
         setSlug(data.slug);
-        setLanguage(data.language);
         setCoverUrl(data.cover_image);
         setContent(data.content);
       }
       setLoading(false);
     };
 
-    if (id) fetchBlog();
+    if (id) fetchProduct();
   }, [id]);
 
   const handleCoverUpload = async (file) => {
@@ -119,7 +117,7 @@ export default function BlogDuzenle() {
         <>
           <select
             value={language}
-            onChange={(e) => setLanguage(e.target.value)}
+            // onChange={(e) => setLanguage(e.target.value)}
             className="h-9 w-full rounded border border-gray-200 p-2 text-sm font-semibold"
           >
             <option value="tr">Türkçe</option>
@@ -132,8 +130,8 @@ export default function BlogDuzenle() {
             value={title}
             onChange={(e) => {
               const value = e.target.value;
-              setTitle(value);
-              setSlug(toSlug(value));
+              // setTitle(value);
+              // setSlug(toSlug(value));
             }}
             className="h-9 w-full rounded border border-gray-200 p-2 text-sm font-semibold placeholder:text-gray-600"
           />
@@ -142,7 +140,7 @@ export default function BlogDuzenle() {
             type="text"
             placeholder="Slug"
             value={slug}
-            onChange={(e) => setSlug(e.target.value)}
+            // onChange={(e) => setSlug(e.target.value)}
             className="h-9 w-full rounded border border-gray-200 p-2 text-sm font-semibold placeholder:text-gray-600"
           />
 
@@ -157,7 +155,7 @@ export default function BlogDuzenle() {
                 onChange={(e) => {
                   const file = e.target.files?.[0] || null;
                   if (file) {
-                    handleCoverUpload(file);
+                    // handleCoverUpload(file);
                   }
                 }}
                 hidden
@@ -173,7 +171,7 @@ export default function BlogDuzenle() {
                       <button
                         type="button"
                         onClick={() => {
-                          setCoverUrl("");
+                          // setCoverUrl("");
                         }}
                         className="border-red-600 text-destructive text-red-600 flex h-[35px] w-[35px] items-center justify-center rounded-[8px] border bg-white"
                       >

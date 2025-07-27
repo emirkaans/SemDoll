@@ -10,7 +10,7 @@ const CustomEditor = dynamic(() => import("@/components/Editor"), {
   ssr: false,
 });
 
-export default function BlogYazisiOlustur() {
+export default function CreateProduct() {
   const [title, setTitle] = useState("");
   const [slug, setSlug] = useState("");
   const [language, setLanguage] = useState("tr");

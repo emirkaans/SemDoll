@@ -1,6 +1,5 @@
 [
   {
-    "id": "337622996",
     "name": "11 inches Waldorf Doll",
     "price": 157.5,
     "originalPrice": 175,
@@ -22,7 +21,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1284485400",
     "name": "8 inches Waldorf Doll",
     "price": 157.5,
     "originalPrice": 175,
@@ -45,7 +43,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1694128199",
     "name": "18 inches Waldorf Doll",
     "price": 225,
     "originalPrice": 250,
@@ -68,7 +65,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "194569573",
     "name": "14 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -91,7 +87,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1340676120",
     "name": "16 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -114,7 +109,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "39184680",
     "name": "17 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -137,7 +131,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1185291233",
     "name": "13 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -160,7 +153,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1574430369",
     "name": "15 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -183,7 +175,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1340676126",
     "name": "16 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -206,7 +197,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "471333369",
     "name": "8 inches Waldorf Doll",
     "price": 157.5,
     "originalPrice": 175,
@@ -229,7 +219,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1340676128",
     "name": "16 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -252,7 +241,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1562701290",
     "name": "15 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -272,7 +260,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "692971250",
     "name": "10 inches Waldorf Doll",
     "price": 157.5,
     "originalPrice": 175,
@@ -295,7 +282,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1562701287",
     "name": "15 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -318,7 +304,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "185202110",
     "name": "Felted Doll Head",
     "price": 108,
     "originalPrice": 120,
@@ -341,7 +326,6 @@
     "type": "feltedDollHead"
   },
   {
-    "id": "692971247",
     "name": "10 inches Waldorf Doll",
     "price": 157.5,
     "originalPrice": 175,
@@ -364,7 +348,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "2084665578",
     "name": "12 inches Waldorf Doll",
     "price": 180,
     "originalPrice": 200,
@@ -387,7 +370,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1314940795",
     "name": "14 inches Blank Doll",
     "price": 100,
     "originalPrice": 100,
@@ -410,7 +392,6 @@
     "type": "blankDoll"
   },
   {
-    "id": "1910677478",
     "name": "13 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -433,7 +414,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "922283397",
     "name": "18 inches Blank Doll",
     "price": 135,
     "originalPrice": 135,
@@ -456,7 +436,6 @@
     "type": "blankDoll"
   },
   {
-    "id": "692971221",
     "name": "10 inches Waldorf Doll",
     "price": 170,
     "originalPrice": 200,
@@ -479,7 +458,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "185202082",
     "name": "Felted Doll Head",
     "price": 108,
     "originalPrice": 120,
@@ -502,7 +480,6 @@
     "type": "feltedDollHead"
   },
   {
-    "id": "1736689355",
     "name": "14 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -525,7 +502,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1235597343",
     "name": "13 inches Custom Doll",
     "price": 250,
     "originalPrice": 250,
@@ -548,7 +524,6 @@
     "type": "customDoll"
   },
   {
-    "id": "1118612124",
     "name": "16 inches Blank Doll",
     "price": 120,
     "originalPrice": 120,
@@ -571,7 +546,6 @@
     "type": "blankDoll"
   },
   {
-    "id": "1696284577",
     "name": "18 inches Rag Doll",
     "price": 170,
     "originalPrice": 200,
@@ -593,7 +567,6 @@
     "type": "ragDoll"
   },
   {
-    "id": "1885409895",
     "name": "13 inches Rag Doll",
     "price": 150,
     "originalPrice": 150,
@@ -614,7 +587,6 @@
     "type": "ragDoll"
   },
   {
-    "id": "1696284580",
     "name": "18 inches Rag Doll",
     "price": 170,
     "originalPrice": 200,
@@ -637,7 +609,6 @@
     "type": "ragDoll"
   },
   {
-    "id": "2084665522",
     "name": "12 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -660,7 +631,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1736689325",
     "name": "14 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -683,7 +653,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1696284604",
     "name": "18 inches Rag Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -704,7 +673,6 @@
     "type": "ragDoll"
   },
   {
-    "id": "1118612153",
     "name": "16 inches Blank Doll",
     "price": 100,
     "originalPrice": 100,
@@ -727,7 +695,6 @@
     "type": "blankDoll"
   },
   {
-    "id": "310077514",
     "name": "14 inches Rag Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -750,7 +717,6 @@
     "type": "ragDoll"
   },
   {
-    "id": "1388713125",
     "name": "16 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -772,7 +738,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "667543546",
     "name": "16 inches Custom Doll",
     "price": 250,
     "originalPrice": 250,
@@ -787,7 +752,6 @@
     "type": "customDoll"
   },
   {
-    "id": "1760111389",
     "name": "Clothing Set",
     "price": 100,
     "originalPrice": 100,
@@ -808,7 +772,6 @@
     "type": "clothingSet"
   },
   {
-    "id": "1736689318",
     "name": "14 inches Waldorf Doll",
     "price": 212.5,
     "originalPrice": 250,
@@ -831,7 +794,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1388713099",
     "name": "16 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -854,7 +816,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1388713098",
     "name": "16 inches Waldorf Doll",
     "price": 191.25,
     "originalPrice": 225,
@@ -877,7 +838,6 @@
     "type": "waldorfDoll"
   },
   {
-    "id": "1760111362",
     "name": "Clothing Set",
     "price": 100,
     "originalPrice": 100,
@@ -898,7 +858,6 @@
     "type": "clothingSet"
   },
   {
-    "id": "1760111361",
     "name": "Clothing Set",
     "price": 100,
     "originalPrice": 100,
@@ -920,7 +879,6 @@
     "type": "clothingSet"
   },
   {
-    "id": "1760111360",
     "name": "Clothing Set",
     "price": 100,
     "originalPrice": 100,
@@ -942,7 +900,6 @@
     "type": "clothingSet"
   },
   {
-    "id": "1760111359",
     "name": "Clothing Set",
     "price": 100,
     "originalPrice": 100,
@@ -965,7 +922,6 @@
     "type": "clothingSet"
   },
   {
-    "id": "1760111358",
     "name": "Clothing Set",
     "price": 100,
     "originalPrice": 100,
@@ -987,7 +943,6 @@
     "type": "clothingSet"
   },
   {
-    "id": "1760111357",
     "name": "Clothing Set",
     "price": 100,
     "originalPrice": 100,
@@ -1009,7 +964,6 @@
     "type": "clothingSet"
   },
   {
-    "id": "120952288",
     "name": "17 inches Rag Doll",
     "price": 148.75,
     "originalPrice": 175,
@@ -1032,7 +986,6 @@
     "type": "ragDoll"
   },
   {
-    "id": "1454380044",
     "name": "16 inches Rag Doll",
     "price": 148.75,
     "originalPrice": 175,
@@ -1055,7 +1008,6 @@
     "type": "ragDoll"
   },
   {
-    "id": "1696284665",
     "name": "18 inches Rag Doll",
     "price": 170,
     "originalPrice": 200,
@@ -1078,7 +1030,6 @@
     "type": "ragDoll"
   },
   {
-    "id": "390723022",
     "name": "15 inches Gnome",
     "price": 121.5,
     "originalPrice": 135,
@@ -1099,7 +1050,6 @@
     "type": "gnome"
   },
   {
-    "id": "390723021",
     "name": "15 inches Gnome",
     "price": 121.5,
     "originalPrice": 135,
@@ -1122,7 +1072,6 @@
     "type": "gnome"
   },
   {
-    "id": "76384010",
     "name": "16 inches Gnome",
     "price": 121.5,
     "originalPrice": 135,
@@ -1144,7 +1093,6 @@
     "type": "gnome"
   },
   {
-    "id": "705062029",
     "name": "14 inches Gnome",
     "price": 121.5,
     "originalPrice": 135,
@@ -1166,7 +1114,6 @@
     "type": "gnome"
   },
   {
-    "id": "2013007487",
     "name": "10 inches Waldorf Doll",
     "price": 250,
     "originalPrice": 250,
