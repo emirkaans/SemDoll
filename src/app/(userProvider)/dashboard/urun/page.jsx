@@ -57,30 +57,36 @@ export default function ProductList() {
         <div className="border-secondary-500 h-4 w-4 animate-spin rounded-full border-2 border-t-transparent"></div>
       ) : (
         <ul className="space-y-4">
-          {products.map((product) => (
-            <li
-              key={product.id}
-              className="flex items-center justify-between gap-4 rounded border p-4"
-            >
-              <div>
-                <h2 className="font-semibold">{product.name}</h2>
-                <p className="text-sm text-gray-500">/{product.url}</p>
-              </div>
+          {products.map((product) => {
+            const imagesArray = (product.images || {}).img || [];
 
-              <a href={`/dashboard/urun/${product.id}/duzenle`}>
-                <IconPencil />
-                <button>Düzenle</button>
-              </a>
+            return (
+              <li
+                key={product.id}
+                className="flex items-center justify-between gap-4 rounded border p-4"
+              >
+                <div>
+                  <h2 className="font-semibold">{product.name}</h2>
+                  <p className="text-sm text-gray-500">/{product.url}</p>
+                </div>
 
-              <div className="flex gap-2">
-                {/* <AlertDelete
+                <a href={`/dashboard/urun/${product.id}/duzenle`}>
+                  <IconPencil />
+                  <button>Düzenle</button>
+                </a>
+
+                <img src={imagesArray[0]} alt="" className="w-[150px]" />
+
+                <div className="flex gap-2">
+                  {/* <AlertDelete
                   open={isOpen}
                   onOpenChange={setIsOpen}
                   handleDelete={() => handleDelete(product.id)}
                 /> */}
-              </div>
-            </li>
-          ))}
+                </div>
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>

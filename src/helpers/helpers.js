@@ -23,6 +23,12 @@ const toCamelCase = (input) => {
     .join("");
 };
 
+const camelCaseToTitle = (str) => {
+  return str
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+};
+
 export const getRandomElements = (number, array) => {
   if (array.length <= number) {
     return array;
