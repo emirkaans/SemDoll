@@ -2,13 +2,24 @@
 import { IconFileText, IconHome } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Gloria_Hallelujah } from "@next/font/google";
+
+const gloria = Gloria_Hallelujah({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export default function DashboardLayout({ children }) {
   const pathname = usePathname();
   return (
     <div className="flex min-h-screen">
       <aside className="w-64 border-r border-[#E4E4E7] bg-[#27272A] p-2 text-white">
-        <img src="/assets/logo-og.png" />
+        <div className="text-center text-4xl">
+          <Link className={gloria.className} href="/">
+            SemDoll
+          </Link>
+        </div>
+
         <ul className="mt-6 space-y-2">
           <li
             className={`rounded-md px-2 py-1 text-sm font-medium ${pathname === "/dashboard" ? "bg-white text-[#09090B]" : ""}`}
