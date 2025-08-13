@@ -57,8 +57,9 @@ export default function ProductList() {
         <div className="border-secondary-500 h-4 w-4 animate-spin rounded-full border-2 border-t-transparent"></div>
       ) : (
         <ul className="space-y-4">
+          <h1>Toplam Ürün Adedi : {products.length}</h1>
           {products.map((product) => {
-            const imagesArray = (product.images || {}).img || [];
+            const imagesArray = JSON.parse(product.images || "[]") || [];
 
             return (
               <li
@@ -66,8 +67,12 @@ export default function ProductList() {
                 className="flex items-center justify-between gap-4 rounded border p-4"
               >
                 <div>
+                  <a href={product.url}>
+                    <button>Ürüne Git</button>
+                  </a>
+
                   <h2 className="font-semibold">{product.name}</h2>
-                  <p className="text-sm text-gray-500">/{product.url}</p>
+                  <p className="text-sm text-gray-500">{product.url}</p>
                 </div>
 
                 <a href={`/dashboard/urun/${product.id}/duzenle`}>
